@@ -37,6 +37,7 @@ group :development, :test do
   gem 'byebug'
 
   gem 'pry-rails'  # rails console(もしくは、rails c)でirbの代わりにpryを使われる
+  gem 'better_errors'
   gem 'pry-doc'    # methodを表示
   gem 'pry-byebug' # デバッグを実施(Ruby 2.0以降で動作する)
   gem 'pry-stack_explorer' # スタックをたどれる
@@ -51,3 +52,17 @@ end
 gem 'twitter-bootstrap-rails'
 
 gem 'rails_12factor', group: :production
+
+group :development do
+  gem 'letter_opener_web'
+end
+
+gem 'devise'
+
+gem 'faker'
+
+gem 'rails_admin'
+
+gem 'cancan'
+
+gem 'activeresource'
