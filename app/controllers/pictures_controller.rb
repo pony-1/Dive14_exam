@@ -19,7 +19,7 @@ before_action :authenticate_user!
     @picture.user_id = current_user.id
    if @picture.save
      # 一覧画面へ遷移して"ブログを作成しました！"とメッセージを表示します。
-     redirect_to pictures_path, notice: "ブログを作成しました！"
+     redirect_to pictures_path, notice: "instagramを作成しました！"
      NoticeMailer.sendmail_picture(@picture).deliver
    else
      # 入力フォームを再描画します。
@@ -33,7 +33,7 @@ before_action :authenticate_user!
   def update
 
       if @picture.update(pictures_params)
-        redirect_to pictures_path, notice: "ブログを更新しました！"
+        redirect_to pictures_path, notice: "instagramを更新しました！"
       else
         render 'edit'
       end
@@ -41,7 +41,7 @@ before_action :authenticate_user!
 
   def destroy
     @picture.destroy
-    redirect_to pictures_path, notice: "ブログを削除しました！"
+    redirect_to pictures_path, notice: "instagramを削除しました！"
  end
 
  def confirm
