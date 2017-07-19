@@ -10,6 +10,7 @@ header ul {
 }
 
 header ul a {
+  display: block;
   padding: 15px;
   text-decoration: none;
   color: white;
@@ -59,3 +60,7 @@ body {
   color: green;
   padding-top: 10px;
 }
+
+.navbar-brand {
+    color: white;
+    }

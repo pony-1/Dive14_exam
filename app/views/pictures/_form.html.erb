@@ -12,6 +12,13 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= image_tag(@picture.fot2) if image_tag(@picture.fot2) %>
+
+    <%= f.file_field :fot2 %>
+    <%= f.hidden_field :fot2_cache %>
+  </div>
+
   <%= f.label :タイトル %>
   <%= f.text_field :title, class: 'form-control' %>
   <br>
@@ -21,4 +28,4 @@
 <%= f.submit '投稿', class: 'btn btn-primary btn-block' %>
 <% end %>
 
-<%= link_to "ブログ一覧画面にもどる", pictures_path %>
+<%= link_to "投稿一覧画面にもどる", pictures_path %>

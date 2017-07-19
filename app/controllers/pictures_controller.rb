@@ -51,7 +51,7 @@ before_action :authenticate_user!
 
   private
     def pictures_params
-      params.require(:picture).permit(:title, :content)
+      params.require(:picture).permit(:title, :content,:fot2_cache,:fot2)
     end
 
     def set_picture
